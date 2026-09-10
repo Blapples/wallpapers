@@ -1,0 +1,82 @@
+name: Update wallpapers (na-ive style)
+
+# Regenerates wallpapers.json, manifest.json, thumbnails, and previews,
+# then squashes the whole repo into a single fresh commit on main - same
+# approach as na-ive/wallpapers, so the repo doesn't accumulate history
+# bloat from binary images on every change.
+#
+# Dates survive the squash via .github/data/wallpaper-dates.json, which
+# generate_metadata.py maintains and which gets committed fresh every run
+# (see scripts/generate_manifest.py - it reads dates from that cache, not
+# from git history, precisely because git history won't be trustworthy
+# after this workflow runs).
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-wallpapers
+  cancel-in-progress: false   # never cancel mid-squash
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1   # history is irrelevant here - dates come from the cache file, not git log
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Restore cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            thumbnails
+            previews
+            wallpapers.json
+          key: ${{ runner.os }}-wallpaper-cache-${{ hashFiles('.github/data/wallpaper-dates.json', '.github/scripts/generate_metadata.py') }}
+          restore-keys: |
+            ${{ runner.os }}-wallpaper-cache-
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          python -m pip install --upgrade pip
+          pip install Pillow
+
+      - name: Generate wallpapers.json (thumbnails, previews, colors, dates cache)
+        run: python .github/scripts/generate_metadata.py
+
+      - name: Generate manifest.json (from the dates cache, not git log)
+        run: python scripts/generate_manifest.py
+
+      - name: Save cache
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            thumbnails
+            previews
+            wallpapers.json
+          key: ${{ runner.os }}-wallpaper-cache-${{ hashFiles('.github/data/wallpaper-dates.json', '.github/scripts/generate_metadata.py') }}
+
+      - name: Squash everything into a single commit on main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout --orphan temp_main
+          git add -A
+          git commit -m "update: $(TZ='Asia/Jakarta' date -Iseconds)"
+          git branch -M main
+          git push origin main --force-with-lease

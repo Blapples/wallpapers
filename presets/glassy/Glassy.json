@@ -1,0 +1,608 @@
+{
+  "appearance": {
+    "extraBackgroundTint": true,
+    "fakeScreenRounding": 0,
+    "fonts": {
+      "expressive": "Space Grotesk",
+      "iconNerd": "JetBrains Mono NF",
+      "main": "Google Sans Flex",
+      "monospace": "JetBrains Mono NF",
+      "numbers": "Google Sans Flex",
+      "reading": "Readex Pro",
+      "title": "Google Sans Flex"
+    },
+    "palette": {
+      "accentColor": "",
+      "type": "scheme-rainbow"
+    },
+    "transparency": {
+      "automatic": true,
+      "backgroundTransparency": 0.11,
+      "contentTransparency": 0.57,
+      "enable": false
+    },
+    "wallpaperTheming": {
+      "enableAppsAndShell": true,
+      "enableQtApps": true,
+      "enableTerminal": true,
+      "terminalGenerationProps": {
+        "forceDarkMode": false,
+        "harmonizeThreshold": 100,
+        "harmony": 0.6,
+        "termFgBoost": 0.35
+      }
+    }
+  },
+  "apps": {
+    "bluetooth": "kcmshell6 kcm_bluetooth",
+    "changePassword": "kitty -1 --hold=yes fish -i -c 'passwd'",
+    "manageUser": "kcmshell6 kcm_users",
+    "network": "kcmshell6 kcm_networkmanagement",
+    "networkEthernet": "kcmshell6 kcm_networkmanagement",
+    "taskManager": "plasma-systemmonitor --page-name Processes",
+    "terminal": "kitty -1",
+    "update": "kitty -1 --hold=yes fish -i -c 'pkexec pacman -Syu'",
+    "volumeMixer": "~/.config/hypr/hyprland/scripts/launch_first_available.sh \"pavucontrol-qt\" \"pavucontrol\""
+  },
+  "background": {
+    "centeredWallpaper": false,
+    "centeredWallpaperColor": "layer1",
+    "centeredWallpaperOnlyWhenLocked": true,
+    "centeredWallpaperShape": "Cookie12Sided",
+    "centeredWallpaperSize": 400,
+    "enableWallpaperPreview": false,
+    "hideWhenFullscreen": true,
+    "lockWall": "/home/blapples/Pictures/Wallpapers/02-blue-teal.png",
+    "parallax": {
+      "autoVertical": false,
+      "enableSidebar": false,
+      "enableWorkspace": false,
+      "vertical": false,
+      "widgetsFactor": 1.2,
+      "workspaceZoom": 1.07
+    },
+    "screenList": [],
+    "showBlur": false,
+    "showGrid": true,
+    "showSnapLines": true,
+    "splitRatio": "25",
+    "splitSide": "left",
+    "thumbnailPath": "/home/blapples/.config/hypr/custom/scripts/mpvpaper_thumbnails/yor-forger-assassin-spy-x-family-4k-live-wallpaper.mp4.jpg",
+    "wallpaperAnimation": "transition",
+    "wallpaperPath": "/home/blapples/Pictures/Wallpapers/03-teal-green.png",
+    "widgets": {
+      "calendar": {
+        "enable": true,
+        "placementStrategy": "free",
+        "sizeMode": "1x2",
+        "x": 1152,
+        "y": 864
+      },
+      "clock": {
+        "color": "",
+        "cookie": {
+          "aiStyling": false,
+          "constantlyRotate": true,
+          "dateInClock": true,
+          "dateStyle": "bubble",
+          "dialNumberStyle": "numbers",
+          "hourHandStyle": "hollow",
+          "hourMarks": false,
+          "minuteHandStyle": "bold",
+          "secondHandStyle": "dot",
+          "sides": 14,
+          "timeIndicators": false,
+          "useSineCookie": true
+        },
+        "digital": {
+          "adaptiveAlignment": true,
+          "animateChange": true,
+          "font": {
+            "family": "Google Sans Flex",
+            "roundness": 12.42580521547562,
+            "size": 82.69469080701337,
+            "weight": 350.7849923915382,
+            "width": 65.3117629485769
+          },
+          "showDate": true,
+          "vertical": true
+        },
+        "enable": true,
+        "pixel": {
+          "orientation": "horizontal"
+        },
+        "placementStrategy": "free",
+        "quote": {
+          "enable": true,
+          "followClock": true,
+          "text": ""
+        },
+        "showOnlyWhenLocked": false,
+        "style": "pixel",
+        "styleLocked": "pixel",
+        "x": 768,
+        "y": 852
+      },
+      "customImage": {
+        "enable": false,
+        "path": "/home/blapples/Downloads/128845239331438728.jpg",
+        "placementStrategy": "free",
+        "shape": "PixelCircle",
+        "size": 253.3671875,
+        "x": 840,
+        "y": 264
+      },
+      "images": {
+        "enable": false,
+        "placementStrategy": "free",
+        "x": 1596,
+        "y": 732
+      },
+      "media": {
+        "backgroundShape": "Cookie4Sided",
+        "enable": true,
+        "placementStrategy": "free",
+        "showControls": true,
+        "showLyrics": false,
+        "showTitles": true,
+        "sizeMode": "1x1",
+        "x": 348,
+        "y": 864
+      },
+      "notes": {
+        "enable": false,
+        "placementStrategy": "free",
+        "x": 48,
+        "y": 732
+      },
+      "resources": {
+        "enable": true,
+        "placementStrategy": "free",
+        "vertical": true,
+        "x": 1620,
+        "y": 360
+      },
+      "timers": {
+        "enable": true,
+        "placementStrategy": "free",
+        "vertical": true,
+        "x": 168,
+        "y": 360
+      },
+      "todo": {
+        "enable": false,
+        "placementStrategy": "free",
+        "x": 420,
+        "y": 240
+      },
+      "userCard": {
+        "enable": true,
+        "placementStrategy": "free",
+        "sizeMode": "1x2",
+        "x": 492,
+        "y": 864
+      },
+      "visualizer": {
+        "enable": true,
+        "placementStrategy": "free",
+        "x": 0,
+        "y": 840
+      },
+      "weather": {
+        "enable": true,
+        "expanded": false,
+        "placementStrategy": "free",
+        "sizeMode": "1x1",
+        "x": 1440,
+        "y": 864
+      },
+      "worldClock": {
+        "clockCount": 2,
+        "enable": false,
+        "placementStrategy": "free",
+        "sizeMode": "4x1",
+        "timezones": [
+          "Asia/Kolkata",
+          "Asia/Manila",
+          "Asia/Tokyo",
+          "Asia/Seoul"
+        ],
+        "x": 408,
+        "y": 540
+      }
+    },
+    "widgetsLocked": true
+  },
+  "bar": {
+    "autoHide": {
+      "enable": false,
+      "hoverRegionWidth": 2,
+      "pushWindows": false,
+      "showWhenPressingSuper": {
+        "delay": 140,
+        "enable": true
+      }
+    },
+    "borderless": "transparent",
+    "bottom": false,
+    "cornerStyle": 1,
+    "divider": {
+      "spacing": 20,
+      "style": "rect"
+    },
+    "floatStyleShadow": true,
+    "followFrameColor": true,
+    "frameColor": "black",
+    "frameThickness": 8,
+    "groupColor": "primaryContainer",
+    "indicators": {
+      "notifications": {
+        "showUnreadCount": true
+      }
+    },
+    "layouts": {
+      "leftLayout": [],
+      "middleLayout": [
+        "utilButtons",
+        "workspaces",
+        "batteryIndicator",
+        "systemIcons",
+        "sysTray",
+        "networkSpeed"
+      ],
+      "rightLayout": []
+    },
+    "media": {
+      "alwaysVisible": false,
+      "maxWidth": 280,
+      "minWidth": 100,
+      "onlyTitle": false,
+      "preferredPlayer": ""
+    },
+    "resources": {
+      "alwaysShowCpu": true,
+      "alwaysShowCpuTemp": true,
+      "alwaysShowDisk": true,
+      "alwaysShowRam": true,
+      "alwaysShowSwap": true,
+      "cpuWarningThreshold": 90,
+      "memoryWarningThreshold": 95,
+      "showValue": false,
+      "style": "filled",
+      "swapWarningThreshold": 85
+    },
+    "screenList": [],
+    "showBackground": true,
+    "showFrame": false,
+    "tooltips": {
+      "clickToShow": false
+    },
+    "topLeftIcon": "spark",
+    "utilButtons": {
+      "isRecording": false,
+      "showColorPicker": true,
+      "showDarkModeToggle": true,
+      "showKeyboardToggle": true,
+      "showMicToggle": false,
+      "showPerformanceProfileToggle": false,
+      "showScreenRecord": false,
+      "showScreenSnip": true,
+      "showWallpaperToggle": false
+    },
+    "verbose": true,
+    "vertical": false,
+    "workspaces": {
+      "alwaysShowNumbers": false,
+      "indicatorStyle": "icon",
+      "monochromeIcons": true,
+      "numberMap": [],
+      "showAppIcons": true,
+      "showNumberDelay": 300,
+      "shown": 5,
+      "useNerdFont": false
+    }
+  },
+  "calendar": {
+    "locale": "en-GB"
+  },
+  "conflictKiller": {
+    "autoKillNotificationDaemons": false,
+    "autoKillTrays": true
+  },
+  "crosshair": {
+    "code": "0;P;d;1;0l;10;0o;2;1b;0"
+  },
+  "custom": {
+    "colorizeIcon": true,
+    "distroIcon": "cachyos-symbolic"
+  },
+  "dock": {
+    "enable": true,
+    "height": 60,
+    "hoverRegionHeight": 2,
+    "hoverToReveal": true,
+    "ignoredAppRegexes": [],
+    "monochromeIcons": false,
+    "pinnedApps": [
+      "io.missioncenter.missioncenter",
+      "org.kde.dolphin",
+      "com.obsproject.studio",
+      "spotify",
+      "discord",
+      "zen-twilight",
+      "steam",
+      "dev.zed.zed",
+      "ferdium"
+    ],
+    "pinnedOnStartup": false,
+    "showAppsButton": true,
+    "showBackground": true,
+    "showMedia": true,
+    "showPinButton": false
+  },
+  "hacks": {
+    "arbitraryRaceConditionDelay": 20
+  },
+  "hyprland": {
+    "animations": {
+      "animation": "niri",
+      "enable": true
+    },
+    "decoration": {
+      "activeOpacity": 1,
+      "blur": {
+        "enabled": true,
+        "passes": 3,
+        "size": 1
+      },
+      "inactiveOpacity": 0.9,
+      "rounding": 22,
+      "shadow": {
+        "enabled": true,
+        "range": 4
+      }
+    },
+    "general": {
+      "borderSize": 1,
+      "gapsIn": 2,
+      "gapsOut": 5
+    }
+  },
+  "interactions": {
+    "deadPixelWorkaround": {
+      "enable": false
+    },
+    "scrolling": {
+      "fasterTouchpadScroll": false,
+      "mouseScrollDeltaThreshold": 120,
+      "mouseScrollFactor": 120,
+      "touchpadScrollFactor": 450
+    }
+  },
+  "launcher": {
+    "pinnedApps": [
+      "org.kde.dolphin",
+      "kitty",
+      "cmake-gui"
+    ]
+  },
+  "light": {
+    "antiFlashbang": {
+      "enable": false
+    },
+    "night": {
+      "automatic": false,
+      "colorTemperature": 5000,
+      "from": "19:00",
+      "to": "06:30"
+    }
+  },
+  "lock": {
+    "blur": {
+      "enable": false,
+      "extraZoom": 1.1,
+      "radius": 100,
+      "size": 110
+    },
+    "centerClock": false,
+    "launchOnStartup": false,
+    "materialShapeChars": true,
+    "security": {
+      "requirePasswordToPower": false,
+      "unlockKeyring": false
+    },
+    "showLockedText": false,
+    "showMedia": true,
+    "showToolbars": true,
+    "showWidgets": true,
+    "useHyprlock": false
+  },
+  "media": {
+    "filterDuplicatePlayers": true
+  },
+  "notifications": {
+    "position": "top_center",
+    "timeout": 7000
+  },
+  "osd": {
+    "timeout": 1000
+  },
+  "osk": {
+    "layout": "qwerty_full",
+    "pinnedOnStartup": false
+  },
+  "overlay": {
+    "clickthroughOpacity": 0.8,
+    "darkenScreen": true,
+    "floatingImage": {
+      "imageSource": "https://media1.tenor.com/m/SP7W8_el6goAAAAC/zombie-land-saga-most-wanted.gif",
+      "scale": 0.5
+    },
+    "openingZoomAnimation": true
+  },
+  "overview": {
+    "centerIcons": false,
+    "columns": 5,
+    "enable": true,
+    "orderBottomUp": false,
+    "orderRightLeft": false,
+    "rows": 2,
+    "scale": 0.18,
+    "style": "default"
+  },
+  "panelFamily": "ii",
+  "policies": {
+    "ai": 0,
+    "weeb": 2
+  },
+  "profile": {
+    "avatarPath": "/home/blapples/Pictures/avatar",
+    "avatarPicture": "/home/blapples/Pictures/avatar/Ryan Miyoshi · Design @ Column.jpg",
+    "descriptionText": "::distro::",
+    "displayName": "",
+    "onlinePresets": true
+  },
+  "regionSelector": {
+    "annotation": {
+      "useSatty": false
+    },
+    "circle": {
+      "padding": 10,
+      "strokeWidth": 6
+    },
+    "rect": {
+      "showAimLines": true
+    },
+    "targetRegions": {
+      "content": true,
+      "contentRegionOpacity": 0.8,
+      "layers": false,
+      "opacity": 0.3,
+      "selectionPadding": 5,
+      "showLabel": false,
+      "windows": true
+    }
+  },
+  "resources": {
+    "historyLength": 60,
+    "updateInterval": 3000
+  },
+  "settings": {
+    "borderColor": "layer0Border",
+    "borderSize": 1,
+    "style": "minimal"
+  },
+  "sidebar": {
+    "ai": {
+      "textFadeIn": false
+    },
+    "banner": true,
+    "bannerImage": "/home/blapples/Downloads/03-teal-green.png",
+    "booru": {
+      "allowNsfw": false,
+      "defaultProvider": "yandere",
+      "limit": 20,
+      "zerochan": {
+        "username": "[unset]"
+      }
+    },
+    "bottomGroup": false,
+    "cornerOpen": {
+      "bottom": false,
+      "bottomLeftAction": "sidebarLeftOpen",
+      "bottomRightAction": "sidebarRightOpen",
+      "clickless": true,
+      "clicklessCornerEnd": true,
+      "clicklessCornerVerticalOffset": 1,
+      "cornerRegionHeight": 5,
+      "cornerRegionWidth": 250,
+      "enable": true,
+      "valueScroll": true,
+      "visualize": false
+    },
+    "keepRightSidebarLoaded": true,
+    "media": {
+      "artColors": true,
+      "artShape": "Cookie12Sided",
+      "blurredBackground": true,
+      "enable": true,
+      "shapeArt": true,
+      "showLyrics": true
+    },
+    "mediaPlayer": false,
+    "quickSliders": {
+      "enable": true,
+      "showBrightness": true,
+      "showMic": false,
+      "showVolume": true
+    },
+    "quickToggles": {
+      "android": {
+        "columns": 5,
+        "toggles": [
+          {
+            "size": 2,
+            "type": "network"
+          },
+          {
+            "size": 2,
+            "type": "bluetooth"
+          },
+          {
+            "size": 1,
+            "type": "idleInhibitor"
+          },
+          {
+            "size": 1,
+            "type": "gameMode"
+          },
+          {
+            "size": 1,
+            "type": "mic"
+          },
+          {
+            "size": 1,
+            "type": "audio"
+          },
+          {
+            "size": 1,
+            "type": "notifications"
+          },
+          {
+            "size": 1,
+            "type": "screenSnip"
+          }
+        ]
+      },
+      "style": "android"
+    },
+    "translator": {
+      "delay": 300,
+      "enable": false
+    }
+  },
+  "tray": {
+    "filterPassive": true,
+    "invertPinnedItems": true,
+    "monochromeIcons": false,
+    "pinnedItems": [
+      "Fcitx"
+    ],
+    "showItemId": false
+  },
+  "wallpaperSelector": {
+    "changeInterval": 0,
+    "closeAfterSelection": true,
+    "columns": 4,
+    "liveWallpapersPath": "",
+    "showBlurBackground": true,
+    "showHomePath": false,
+    "showSearchbar": true,
+    "useSystemFileDialog": false,
+    "userPath": ""
+  },
+  "windows": {
+    "centerTitle": true,
+    "showTitlebar": true
+  }
+}
